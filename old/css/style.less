@@ -1,0 +1,822 @@
+@import url(reset.less);
+@import url(fonts.less);
+
+body{
+  background-color: white;
+  font-family: OpenSansLight, Verdana, sans-serif;
+  font-size: 18px;
+  color: #242021;
+
+  p{
+    margin: 0;
+  }
+
+  .container{
+    max-width: 1170px;
+    margin: auto;
+  }
+
+  .left{
+    float: left;
+    width: 50%;
+  }
+  .right{
+    float: right;
+    width: 50%;
+  }
+
+  header, .fixedHeader{
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=18, Direction=0, Color=#000000)";/*IE 8*/
+    -moz-box-shadow: 0 7px 18px -7px rgba(0,0,0,0.4);/*FF 3.5+*/
+    -webkit-box-shadow: 0 7px 18px -7px rgba(0,0,0,0.4);/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 0 7px 18px -7px rgba(0,0,0,0.4);/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=18, Direction=135, Color=#000000); /*IE 5.5-7*/
+
+    img{
+      float: left;
+    }
+
+    a{
+      display: inline-block;
+      margin: auto;
+      margin-left: 20px;
+      padding: 20px 30px;
+      box-sizing: border-box;
+      border: 1px solid #898a8b;
+      color: #898a8b;
+      text-decoration: none;
+      border-radius: 5px;
+      &:hover{
+        border-color: black;
+        color: black;
+      }
+      &:active{
+        border-color: black;
+        color: black;
+        background-color: #d9d9d9;
+      }
+    }
+
+    h1{
+      font-family: PTSansNarrowRegular, Verdana, sans-serif;
+      font-size: 48px;
+      color: black;
+      text-align: center;
+      margin: 0;
+      display: block;
+      margin-left: 180px;
+    }
+  }
+  .fixedHeader{
+    text-align: right;
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+  }
+  .compare{
+    .ZenSide{
+      padding: 15px 0 80px 0;
+      float: left;
+      width: 50%;
+      background: url("../img/ZenSideBG.jpg");
+      background-size: cover;
+      background-position: right bottom;
+      .slogan{
+        text-align: right;
+        font-family: PTSansNarrowRegular, Verdana, sans-serif;
+        font-size: 30px;
+        color: black;
+      }
+      .container{
+        width: 100%;
+        max-width: 585px;
+        float: right;
+      }
+      h2{
+        font-family: OpenSansLight, Verdana, sans-serif;
+        font-size: 48px;
+        text-align: left;
+        color: #242021;
+        margin: 80px 0 20px 0;
+        span{
+          font-family: OpenSansRegular, Verdana, sans-serif;
+        }
+      }
+      .character{
+        font-family: OpenSansRegular, Verdana, sans-serif;
+        font-size: 28px;
+        color: #555658;
+        text-align: left;
+      }
+      img{
+        display: block;
+        float: right;
+        padding-right: 30px;
+        box-sizing: border-box;
+        max-width: 100%;
+      }
+      .more{
+        clear: both;
+        padding-top: 130px;
+        text-align: center;
+        a{
+          text-decoration: none;
+          border: 1px solid #898a8b;
+          border-radius: 5px;
+          padding: 20px 30px;
+          box-sizing: border-box;
+          color: #231f20;
+          font-family: OpenSansLight, Verdana, sans-serif;
+          font-size: 29px;
+          cursor: pointer;
+          transition: .3s;
+          &:hover{
+            color: black;
+            border-color: black;
+          }
+          &:active{
+            color: black;
+            border-color: black;
+            background-color: #d9d9d9;
+          }
+        }
+      }
+
+    }
+    .RogSide{
+      padding: 15px 0 80px 0;
+      width: 50%;
+      float: right;
+      background: url("../img/RogSideBG.jpg");
+      background-size: cover;
+      background-position: left bottom;
+      .slogan{
+        text-align: left;
+        font-family: PTSansNarrowRegular, Verdana, sans-serif;
+        font-size: 30px;
+        color: white;
+        margin-left: 10px;
+      }
+      .container{
+        width: 100%;
+        max-width: 585px;
+        float: left;
+      }
+      h2{
+        font-family: OpenSansLight, Verdana, sans-serif;
+        font-size: 48px;
+        text-align: right;
+        color: #ff461b;
+        margin: 80px 0 20px 0;
+        span{
+          font-family: OpenSansRegular, Verdana, sans-serif;
+        }
+      }
+      .character{
+        font-family: OpenSansRegular, Verdana, sans-serif;
+        font-size: 28px;
+        text-align: right;
+        color: #ff6e4c;
+      }
+      img{
+        display: block;
+        float: left;
+        padding-left: 30px;
+        box-sizing: border-box;
+        max-width: 100%;
+      }
+      .more{
+        clear: both;
+        padding-top: 130px;
+        text-align: center;
+        cursor: pointer;
+        a{
+          text-decoration: none;
+          border: 1px solid white;
+          border-radius: 5px;
+          padding: 20px 30px;
+          box-sizing: border-box;
+          color: white;
+          font-family: OpenSansLight, Verdana, sans-serif;
+          font-size: 29px;
+          transition: .3s;
+          &:hover{
+            color: #ff461b;
+            border-color: #ff461b;
+          }
+          &:active{
+            color: white;
+            border-color: #ff461b;
+            background-color: #ff461b;
+          }
+        }
+      }
+    }
+  }
+  .ZenHref{
+    clear: both;
+    .visibleBlock{
+      overflow: hidden;
+      padding: 75px 0 120px 0;
+      background-image: url("../img/shadow1.png");
+      background-repeat: no-repeat;
+      background-position: left center;
+      .container{
+        position: relative;
+      }
+
+      h2{
+        font-size: 48px;
+        margin-top: 0;
+        margin-bottom: 50px;
+        span{
+          font-family: OpenSansRegular, Verdana, sans-serif;
+        }
+      }
+      .right{
+        text-align: center;
+        .title{
+          font-size: 28px;
+          color: #242021;
+          margin-bottom: 30px;
+          text-align: left;
+        }
+        .description{
+          text-align: left;
+          line-height: 24px;
+        }
+        .more{
+          display: inline-block;
+          margin: auto;
+          margin-top: 50px;
+          text-align: center;
+          border: 1px solid #898a8b;
+          border-radius: 5px;
+          padding: 20px 50px;
+          box-sizing: border-box;
+          color: #231f20;
+          font-family: OpenSansLight, Verdana, sans-serif;
+          font-size: 29px;
+          cursor: pointer;
+          transition: .3s;
+          &:hover{
+            border: 1px solid black;
+            color: black;
+          }
+          &:active{
+            border: 1px solid black;
+            color: black;
+            background-color: #d9d9d9;
+          }
+        }
+        img{
+          margin: auto;
+          margin-top: 25px;
+          display: block;
+          max-width: 100%;
+          display: none;
+          &.asusLogo{
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            margin-top: 0;
+          }
+        }
+      }
+      .left{
+        img{
+          max-width: 100%;
+        }
+      }
+    }
+    .hiddenBlocks{
+      display: none;
+      .block{
+        clear: both;
+        margin: 90px 0;
+        overflow: hidden;
+        background-image: url("../img/shadow1.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+
+        .title{
+          font-size: 28px;
+          color: #242021;
+          margin-bottom: 30px;
+          text-align: left;
+        }
+        .description{
+          text-align: left;
+          p{
+            margin-bottom: 30px;
+          }
+        }
+        .illustrations{
+          img{
+            margin: auto;
+            margin-top: 25px;
+            display: block;
+            max-width: 100%;
+          }
+        }
+        .left{
+          img{
+            max-width: 100%;
+          }
+        }
+        &.blockSound{
+          .right{
+            padding-top: 100px;
+          }
+        }
+        &.blockDisplay{
+          .left{
+            padding-top: 70px;
+          }
+        }
+      }
+      .shops{
+        margin-bottom: 90px;
+        text-align: center;
+        a{
+          display: inline-block;
+          margin: auto;
+          margin-top: 50px;
+          text-align: center;
+          border: 1px solid #898a8b;
+          border-radius: 5px;
+          padding: 20px 70px;
+          box-sizing: border-box;
+          color: #231f20;
+          font-family: OpenSansLight, Verdana, sans-serif;
+          font-size: 29px;
+          text-decoration: none;
+          transition: .3s;
+          cursor: pointer;
+          &:hover{
+            border-color: black;
+            color: black;
+          }
+          &:active{
+            border-color: black;
+            color: black;
+            background-color: #d9d9d9;
+          }
+        }
+      }
+    }
+  }
+  .RogHref{
+    clear: both;
+    color: white;
+    .visibleBlock{
+      overflow: hidden;
+      padding: 75px 0 120px 0;
+      background-image: url("../img/Zen/ZenBG.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      .container{
+        position: relative;
+      }
+      h2{
+        font-size: 48px;
+        margin-top: 0;
+        margin-bottom: 50px;
+        span{
+          font-family: OpenSansRegular, Verdana, sans-serif;
+          color: #ff4c2a;
+        }
+      }
+      .right{
+        img{
+          display: block;
+          max-width: 100%;
+          &.rogLogo{
+            position: absolute;
+            top: -50px;
+            right: 0;
+            margin-top: 0;
+          }
+        }
+      }
+      .left{
+        text-align: center;
+        .title{
+          font-size: 28px;
+          margin-bottom: 30px;
+          text-align: left;
+        }
+        .description{
+          text-align: left;
+          line-height: 24px;
+        }
+        .more{
+          display: inline-block;
+          margin: auto;
+          margin-top: 50px;
+          text-align: center;
+          border: 1px solid #898a8b;
+          border-radius: 5px;
+          padding: 20px 30px;
+          box-sizing: border-box;
+          color: white;
+          font-family: OpenSansLight, Verdana, sans-serif;
+          font-size: 29px;
+          cursor: pointer;
+          transition: .3s;
+          &:hover{
+            border: 1px solid #ff4c2a;
+            color: #ff4c2a;
+          }
+          &:active{
+            border: 1px solid #ff4c2a;
+            color: white;
+            background-color: #ff4c2a;
+          }
+        }
+        img{
+          margin: auto;
+          margin-top: 25px;
+          display: block;
+          max-width: 100%;
+          display: none;
+        }
+      }
+    }
+    .hiddenBlocks{
+      display: none;
+      overflow: hidden;
+      background: url("../img/Rog/backgroundRogHid.jpg");
+      background-size: cover;
+      .block{
+        clear: both;
+        margin: 90px 0;
+        overflow: hidden;
+        .title{
+          font-size: 28px;
+          margin-bottom: 30px;
+          text-align: left;
+        }
+        .description{
+          text-align: left;
+          line-height: 24px;
+          p{
+            margin-bottom: 30px;
+          }
+        }
+        .illustrations{
+          img{
+            margin: auto;
+            margin-top: 25px;
+            display: block;
+            max-width: 100%;
+          }
+        }
+        .right{
+          text-align: right;
+        }
+        &.blockSound{
+          margin-bottom: 10px;
+        }
+      }
+      .shops{
+        margin-bottom: 90px;
+        text-align: center;
+        a{
+          display: inline-block;
+          margin: auto;
+          margin-top: 50px;
+          text-align: center;
+          border: 1px solid white;
+          border-radius: 5px;
+          padding: 20px 70px;
+          box-sizing: border-box;
+          color: white;
+          font-family: OpenSansLight, Verdana, sans-serif;
+          font-size: 29px;
+          text-decoration: none;
+          cursor: pointer;
+          transition: .3s;
+          &:hover{
+            border: 1px solid #ff4c2a;
+            color: #ff4c2a;
+          }
+          &:active{
+            border: 1px solid #ff4c2a;
+            color: white;
+            background-color: #ff4c2a;
+          }
+        }
+      }
+      .championChoose{
+        margin-bottom: 100px;
+        text-align: center;
+      }
+    }
+  }
+  footer{
+    background-color: #d4d4d4;
+    overflow: hidden;
+    padding: 15px 0;
+    .left{
+      margin-top: 40px;
+      font-family: OpenSansSemiBold, Verdana, sans-serif;
+      font-size: 14px;
+      color: #3b3a3a;
+    }
+    .right{
+      font-family: OpenSansRegular, Verdana, sans-serif;
+      color: #6a6768;
+      a{
+        text-decoration: none;
+        display: inline-block;
+      }
+      img{
+        display: inline-block;
+        transition: .3s;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+        filter: gray; /* IE 6-9 */
+        &:hover{
+          -webkit-filter: none;
+          -moz-filter: none;
+          -ms-filter: none;
+          -o-filter: none;
+          filter: none;
+          filter: none; /* IE 6-9 */
+        }
+        &.shine{
+          -webkit-filter: none;
+          -moz-filter: none;
+          -ms-filter: none;
+          -o-filter: none;
+          filter: none;
+          filter: none; /* IE 6-9 */
+        }
+      }
+      .leftprim{
+        float: left;
+        width: 50%;
+        margin-right: 10%;
+        font-size: 10px;
+        line-height: 16px;
+        color: #6a6768;
+      }
+      .rightprim{
+        float: right;
+        width: 40%;
+        font-size: 10px;
+        color: #6a6768;
+        line-height: 16px;
+      }
+    }
+    .copyright{
+      clear: both;
+      font-family: OpenSansBold, Verdana, sans-serif;
+      font-weight: bold;
+      font-size: 10px;
+      color: #6a6768;
+      img{
+        display: inline-block;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1170px){
+  body .container{
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  body .compare{
+    h2{
+      text-align: center !important;
+      span{
+        display: block;
+      }
+    }
+    .character{
+      text-align: center !important;
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+  body header{
+    img{
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      float: none;
+      margin-bottom: 10px;
+    }
+    h1{
+      display: block;
+      clear: both;
+      margin-left: 0;
+    }
+  }
+  body .fixedHeader{
+    display: none !important;
+  }
+  body .ZenHref{
+    h2{
+      text-align: center;
+    }
+    .visibleBlock{
+      background: none;
+      .left, .right{
+        float: none;
+        width: 100%;
+        text-align: center;
+        img{
+          margin: auto;
+          &.asusLogo{
+            display: none;
+          }
+        }
+        .title{
+          text-align: center;
+        }
+        .description{
+          text-align: center;
+        }
+      }
+    }
+    .hiddenBlocks{
+      .block{
+        margin: 50px 0;
+        background: none;
+        .left, .right{
+          float: none;
+          width: 100%;
+          img{
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            margin-bottom: 20px;
+          }
+          .title{
+            text-align: center;
+          }
+          .description{
+            text-align: center;
+          }
+        }
+        &.blockSound{
+          .right{
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+  body .RogHref{
+    h2{
+      text-align: center;
+    }
+    .visibleBlock{
+      .left, .right{
+        float: none;
+        width: 100%;
+        text-align: center;
+        img{
+          margin: auto;
+          &.rogLogo{
+            display: none;
+          }
+        }
+        .title{
+          text-align: center;
+        }
+        .description{
+          text-align: center;
+        }
+      }
+    }
+    .hiddenBlocks{
+      .block{
+        margin: 50px 0;
+        background: none;
+        .left, .right{
+          float: none;
+          width: 100%;
+          img{
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            margin-bottom: 20px;
+          }
+          .title{
+            text-align: center;
+          }
+          .description{
+            text-align: center;
+          }
+        }
+        &.blockSound{
+          .right{
+            padding-top: 0;
+          }
+        }
+      }
+      .championChoose{
+        img{
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  body footer{
+    .left, .right{
+      float: none;
+      width: 100%;
+    }
+    .left{
+      margin-top: 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .right{
+      text-align: center;
+      .leftprim, .rightprim{
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px){
+  body header{
+    h1{
+      font-size: 35px;
+    }
+  }
+  body .compare{
+    .ZenSide, .RogSide{
+      float: none;
+      width: 100%;
+      overflow: hidden;
+      .slogan{
+        display: none;
+      }
+      h2{
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px){
+  body .compare{
+    .RogSide, .ZenSide{
+      .more{
+        padding-top: 60px;
+      }
+    }
+  }
+  body .ZenHref{
+    .visibleBlock{
+      h2{
+        span{
+          display: block;
+        }
+      }
+    }
+  }
+  body .RogHref{
+    .visibleBlock{
+      h2{
+        span{
+          display: block;
+        }
+      }
+    }
+  }
+  body footer{
+    .copyright{
+      text-align: center;
+    }
+  }
+}
